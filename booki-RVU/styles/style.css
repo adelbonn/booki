@@ -1,4 +1,5 @@
 /****** General ***********/
+
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +13,23 @@
     --filter-bg-color: #DEEBFF;
 }
 
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--main-bg-color);
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    margin:auto;
+    background-color: white;
+}
+
 .fa-solid {
     color: var(--main-color);
 }
@@ -19,6 +37,12 @@
 ul {
     list-style-type: none;
 }
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 /******header******/
 
 header {
@@ -30,7 +54,7 @@ header {
     align-items: start;
 }
 
-/* *****add code nav bar**** */
+/* *****nav bar*****add code */
 
 .logo-img {
     width: 3.818rem;
@@ -42,8 +66,9 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1.5rem;
-    margin-bottom: 1.25rem;
+    margin-top: 1.5rem;  /**24px**/
+    margin-bottom: 1.25rem;  /**20px**/
+    padding-bottom: 0.938rem;  /**15px**/
     font-size: 1em;
     font-weight: 400;
     text-align: center;
@@ -51,17 +76,17 @@ nav {
 
 nav a {
     margin: 1.25rem 1.25rem;
-    padding: 10px;
+    padding: 0;
     text-decoration: none;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
-    gap: 1.25rem;  
+    gap: 1.25rem;  /**15px**/
 }
 
-/* ***add specific styles nav hébergements**** */
+/* *****specific styles nav hébergements*****add code */
 
 .nav-hebergements {
     margin: 0;
@@ -75,31 +100,34 @@ nav ul {
 }
 
 
-/*add specific styles nav Activités*/
+/* *****specific styles nav Activités*****add code*/
+
 .nav-activités {
     color: black;
     margin: 0;
     padding-right: 0;
     border-bottom: 2px solid transparent; 
 }
+
 .nav-activités:hover {
     color: #0065FC;
     transition: 0.3s;
 }
-/*add h1+P, header*/
+
+/* *****header, section info (h1+P, form)***** add code*/
+
 h1 {
     font-family: 'Raleway', sans-serif;
-    font-size: 1.375rem;
+    font-size: 1.375rem;   /***22px***/
     font-weight: 700;
-    margin: 0.625rem 0px;
+    margin: 0.625rem 0 0 0;
 }
 
-p {
-    font-size: 1em;
+header p {
+    font-size: 1rem;
     font-weight: 400;
-    margin-bottom: 17.5px 0 17.5px 0;
-    padding: 0 10px;
-
+    margin: 8px 0 25px 0;
+    padding: 0 0 10px 0;
 }
 
 
@@ -107,7 +135,6 @@ p {
 
 form {
     display: flex;
-    flex-direction: row;
     margin: 0;
 }
 
@@ -115,28 +142,31 @@ form {
     display:flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
+    max-width: 50px;
+    height: 49px;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     margin: 0;
     background-color: #F2F2F2;
     color: black;
     padding: 15px;
+    border: 1px;
 }
 
 input[type="search"] {
+    max-width: 195px;
     height: 49px; 
-    border: 1px solid #DEEBFF;
+    border: 1px solid var(--filter-bg-color);
     border-left: none; 
     border-right: none; 
-    border-top: 1px solid #F2F2F2;
-    border-bottom: 1px solid #F2F2F2;
+    border-top: 1px solid var(--main-bg-color);
+    border-bottom: 1px solid var(--main-bg-color);
     background-color: white;
     padding: 15px;
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
     font-weight:bold;
-    font-size: 1.12rem;
+    font-size: 1.15rem;   /***18px***/
     color: black;
   }
 
@@ -144,17 +174,22 @@ input[type="search"] {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
+    max-width: 132px;
     height: 49px;
     margin: 0;
-    background-color: #0065FC;
+    background-color: var(--main-color);
     border:none;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    color: #F2F2F2;
+    color: #FfFfFf;
     font-family: 'Raleway',sans-serif;
     font-weight: bold;
     text-align: center;
+    font-size: 1.125rem;
+    padding: 15px 16px 15px 16px;
+    margin: 0;
+    border: 1px;
+    cursor: pointer;
 }
 
 .button-search-text {
@@ -170,22 +205,22 @@ input[type="search"] {
 
 .section-filters {
     display: flex;
-    flex-direction: row;
     align-items: center;
     gap: 15px;
     font-family: 'raleway', sans-serif;
-    font-size: 1.125rem;
+    font-size: 1.125rem;   /**18px**/
     font-weight: 700;
     font-weight: bold;
+    margin: 35px 0 35px 0;
    
 }
 
-.ul-filters {
+.section-filters ul {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
-    gap:0.938rem;
+    gap:0.938rem;  /**15px**/
 }
 
 .button-filters {
@@ -197,20 +232,21 @@ input[type="search"] {
     border: 2px solid #F2F2F2;
     border-radius: 50px;
     font-family: 'Raleway', sans-serif;
-    font-size: 1.63rem;
+    font-size: 1.063rem;   /**17px**/
     font-weight: 700;
     color: black;
+    height: 50px;
     cursor: default; 
 }
 .filtres {
-    font-family: Raleway, sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: bold; 
     margin:0;
 }
 
-.li-filters {    /**** à terminer et vérifier revenir corrigé****/
+.li-filters {   
     display: flex;
-    flex-wrap: wrap;
+    width: auto;
 }
 
 .button-filters:hover {
@@ -222,15 +258,16 @@ input[type="search"] {
 .info-section {
     display: flex;
     align-items: center;
-    margin: 17.5px 0px;
+    margin: 35px 0px;
     gap: 10px;
 }
-/*trouver la bonne icône fontawesome ou simplement un i avec la bonne police*/
+
+/*mettre la bonne icône fontawesome*/
 .info-section i {
-    color: var(--main-color); /* icon color */
-    background-color: white; /* icon backgroound color  */
+    color: var(--main-color); 
+    background-color: white; 
     border: 2px solid var(--filter-bg-color); 
-    border-radius: 50%; /* round shape */
+    border-radius: 50%; 
     padding: 10px; 
 }
 
@@ -243,29 +280,6 @@ input[type="search"] {
 
 /*main*/
 
-/******body******/
-body {
-    font-family: 'Raleway', sans-serif;
-    background-color: #F2F2F2;
-    display: flex;
-    justify-content: center;
-    margin: 0;  /***add code remove the margin and padding to keep the white space on each side***/
-    Padding: 0;
-}
-
-.main-container {
-    width: 100%;
-    max-width: 1440px;
-    padding: 0 50px;
-    box-sizing: border-box;
-    margin:auto;
-    background-color: white;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
 
 .section-title {
     margin: 0;
@@ -281,12 +295,13 @@ a {
 
 .card img {
     object-fit: cover;
-    height: auto;    /*code a retire ou a readapter*/
+    height: auto;   
 
 }
 
 .card-title {
     font-size: 1rem;
+    font-weight: bold;
 }
 
 .euro {
@@ -298,6 +313,7 @@ a {
 }
 
 /****** Hebergements And Populaires ***********/
+
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
@@ -316,26 +332,34 @@ a {
     width: 65%;
     display: flex;
     flex-direction: column;
-  justify-content: space-around;
-    
+    justify-content: space-around; 
+   
 }
 
 .hebergements-cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap:  0 30px;
 }
 
-.img-hébergements {
+.hebergements .card-content {
+    padding-left: 15px;
+}
+
+.img-hebergements {
     width: 100%;
     height: 124px;
     border-radius: 20px 20px 0 0;
     object-fit: cover;
 }
+
 .hebergements-cards a {
     width: calc(33.333% - 30px);
+
+
 }
-.card-hébergements {
+
+.card-hebergements {
     background-color: white;
     border-radius: 20px;
     padding: 5px;
@@ -343,14 +367,24 @@ a {
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.268));
     display: flex;
     flex-direction: column;
+    height:207.25px;
+
 }
 
-.Afficher-plus {
-    display: block;
-    margin: 20px 0 0 0;
-    text-align: start;
+.hebergements-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+
+.hebergements-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+.afficher-plus {
+    
+    margin: 30px 0 0 0;
     color: black;
-    text-decoration: none;
     font-weight: bold;
 }
 
@@ -383,7 +417,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-sizing: border-box;
+
 }
 
 .populaires-cards .card-title {
@@ -399,23 +433,28 @@ a {
     margin-bottom: 5px;
 }
 
-/*activités à Marseille*/
+/* *****activités à Marseille***** */
 
-.activités {
+.activity {
     background-color: white;
     width: 100%;
     display: flex; 
     flex-direction: column;
-    padding: 35px; 
+    padding: 30px; 
+    margin-top: 35px;;
 }
 
-.activites-cards {
+.activity h2 {
+    padding-bottom: 30px;
+}
+
+.activity-cards {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
 }
 
-.card-activités {
+.card-activity {
     flex: 1 1 calc(25% - 30px); /* Divisé en 4 moins la taille du gap */
     display: flex;
     flex-direction: column;
@@ -424,29 +463,48 @@ a {
     border-radius: 20px;
 }
 
-.card-activités img {  /* revoir la proportion des images*/
-    border-radius: 20px 20px 0 0;
+.card-activity img {  /* revoir la proportion des images*/
     object-fit: cover;
     width: 100%;
     height: 380px;
+    border-radius: 20px 20px 0 0;
 }
 
-.card-activités h3 {
-    margin: 20px 0 20px 19px;
-    font-size: 1em;
-    font-family: 'raleway', sans-serif;
+.card-activity h3 {
+   
+    font-size: 1rem;
+    padding: 19px 20px;
 }
     
-/*footer (add code)*/
+/* *****footer***** (add code)*/
 
 footer {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     background: #f2f2f2;
-    margin: 0 50px;
+    margin: 30PX 0 0;
+    padding: 20px;
 }
 
+footer h4 {
+    font-size: 1.125rem;
+    font-weight: bold;
+    text-align: start;
+}
+
+footer ul {
+    display:flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 0.938rem;
+
+}
+
+.section-footer {
+    display: flex;
+    flex: 1 1 calc(33.333%);
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -485,10 +543,14 @@ footer {
         font-size: 13px;
     }
 }
+/***header***/
+
+
+
 
 /***add icon-search***/
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     
     .button-text {
         display: none;
@@ -500,8 +562,16 @@ footer {
 }
 
 
-
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
+@media screen and  (max-width: 767.98px) {
     /* ... */
+}
+
+/******code large dektop****/
+
+@media screen and (min-width: 1440px) {
+
+.main-container {
+        max-width: 1440px;
+    }
 }

@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/styles-mobile.css">
+    <link rel="stylesheet" href="./styles/styles-tablette.css">
     <link rel="icon" type="image/svg+xml" href="images\logo\Booki.png">
 </head>
 
@@ -22,22 +24,22 @@
             <nav>
                 <img class="logo-img" src="images/logo/Booki.png" alt="logo entreprise booki" />
                 <ul>
-                    <li>
+                    <li id="barre-hebergements">
                         <a class="nav-hebergements" href="#Hébergements">Hébergements</a>
                     </li>
-                    <li>
+                    <li id="barre-activity">
                         <a class="nav-activités" href="#Activités">Activités</a>
                     </li>
                 </ul>
             </nav>
 
-
+        <section class="info">   
             <h1>Trouvez votre hébergement pour des vacances de rêves</h1>
             <p>En plein centre-ville ou en pleine nature</p>
 
             <form>
                 <i class="fa-solid fa-location-dot"></i>
-                <input type="search" name="ville" id="ville" placeholder="Marseille,France ">
+                <input type="search" name="ville" id="ville" placeholder="Marseille, France ">
                 <button class="button-search" type="submit">
                     <span class="button-search-text">Rechercher</span>
                     <i class="fa-solid fa-search button-icon"></i>
@@ -46,7 +48,7 @@
 
             <section class="section-filters">
                 <p class="filtres">Filtres</p>
-                <ul class="ul-filters">
+                <ul>
                     <li>
                         <button class="button-filters">
                             <i class="fa-solid fa-money-bill-wave"></i>
@@ -72,7 +74,7 @@
                         </button>
                     </li>
                 </ul>
-            </section>
+        </section>
             <div class="info-section">
                 <i class="fa-solid fa-circle-info"></i>
                 <p>Plus de 500 logements sont disponibles dans cette ville</p>
@@ -86,8 +88,8 @@
                     <h2>Hébergements à Marseille</h2>
                     <div class="hebergements-cards">
                         <a href="#">
-                            <article class="card-hébergements">
-                                <img class="img-hébergements" src=".\images\hebergements\fred-kleber.jpg"
+                            <article class="card-hebergements">
+                                <img class="img-hebergements" src=".\images\hebergements\fred-kleber.jpg"
                                     alt="chambre de l'hôtel du port montrant les lits, une pièce très claire et une fenêtre ouverte">
 
                                 <div class="card-content">
@@ -108,9 +110,9 @@
                         </a>
 
                         <a href="#">
-                            <article class="card-hébergements">
+                            <article class="card-hebergements">
 
-                                <img class="img-hébergements" src=".\images\hebergements\febrian-zakaria.jpg"
+                                <img class="img-hebergements" src=".\images\hebergements\febrian-zakaria.jpg"
                                     alt="chambre de l'hôtel Chez Amina, montrant les lits, un bureau et une chaise en bois et la télé au mur, pièce très éclirée et fenêtre en fond">
 
                                 <div class="card-content">
@@ -131,9 +133,9 @@
                         </a>
 
                         <a href="#">
-                            <article class="card-hébergements">
+                            <article class="card-hebergements">
 
-                                <img class="img-hébergements" src=".\images\hebergements\reisetopia.jpg"
+                                <img class="img-hebergements" src=".\images\hebergements\reisetopia.jpg"
                                     alt="chambre de l'hôtel Les Mouettes montrant un lit, lumière tamisée, une armoire avec miroirs arrondis et table de chevet">
 
                                 <div class="card-content">
@@ -155,9 +157,9 @@
 
 
                         <a href="#">
-                            <article class="card-hébergements">
+                            <article class="card-hebergements">
 
-                                <img class="img-hébergements" src=".\images\hebergements\annie-spratt.jpg"
+                                <img class="img-hebergements" src=".\images\hebergements\annie-spratt.jpg"
                                     alt="chambre de l'hôtel de la Mer, montrant le lit, avec deux tables de chevet, un tableau de la mer accroché au dessus du lit, ambiance océane bleu et blanc">
 
                                 <div class="card-content">
@@ -178,9 +180,9 @@
                         </a>
 
                         <a href="#">
-                            <article class="card-hébergements">
+                            <article class="card-hebergements">
 
-                                <img class="img-hébergements" src=".\images\hebergements\marcus-loke.jpg"
+                                <img class="img-hebergements" src=".\images\hebergements\marcus-loke.jpg"
                                     alt="chambre de l'hôtel La Canebière montrant des lits super posé devant une fenêtre donnant sur la rue">
 
                                 <div class="card-content">
@@ -201,9 +203,9 @@
                         </a>
 
                         <a href="#">
-                            <article class="card-hébergements">
+                            <article class="card-hebergements">
 
-                                <img class="img-hébergements" src=".\images\hebergements\nicate-lee.jpg"
+                                <img class="img-hebergements" src=".\images\hebergements\nicate-lee.jpg"
                                     alt="chambre de l'hôtel de l'Auberge Le Panier, montrant plusieurs lits super posé en bois style bambou">
 
                                 <div class="card-content">
@@ -223,7 +225,13 @@
                             </article>
                         </a>
                     </div>
-                    <h3>Afficher plus</h3>
+                    <div class="afficher-plus">
+                    <a href="#">
+                    <h3>Afficher plus
+                    </a>  
+                    </h3>
+                 </div>
+
                 </section>
 
                 <section class="populaires">
@@ -296,10 +304,10 @@
                 </section>
         </main>
 
-        <section class="activités" id="Activités">
+        <section class="activity" id="Activités">
             <h2 class="section-title">Activités à Marseille</h2>
-            <div class="activites-cards">
-                <article class="card-activités">
+            <div class="activity-cards">
+                <article class="card-activity">
                     <a href="#"> 
                         <!-- j'ai ajouté les  lien -->
                         <img src=".\images\activites\reno-laithienne.jpg"
@@ -307,23 +315,23 @@
                             <h3>Vieux-Port</h3>
                     </a>
                 </article>
-                <article class="card-activités">
+                <article class="card-activity">
                     <a href="#">
                         <img src="./images/activites/paul-hermann.jpg" alt="Fort de Pomègues posé sur des rochers">
                             <h3>Fort de Pomègues</h3>
                     </a>
                 </article>
-                <article class="card-activités">
+                <article class="card-activity">
                     <a href="#">
                     <img src="./images/activites/kilyan-sockalingum.jpg"
                         alt="Les calanques avec en fond la Méditérannée">
                         <h3>Parc national des Calanques</h3>
                     </a>
                 </article>
-                <article class="card-activités">
+                <article class="card-activity">
                     <a href="#">
                     <img src="./images/activites/florian-wehde.jpg"
-                        alt="Notre-Dame-de-La-Garde, avec la ville au pied de la coline en premierr plan">
+                        alt="Notre-Dame-de-La-Garde, avec la ville au pied de la coline en premier plan">
                         <h3>Notre-Dame-de-la-Garde</h3>
                     </a>
                 </article>
@@ -331,10 +339,9 @@
         </section>
 
         <footer>
-
-            <section>g_____________ju²_
-                <h4>à propos</h4>
-                <ul>
+            <section class="section-footer">
+                <ul> 
+                <h4>A propos</h4>
                     <li>
                         <a href="#">Fonctionnement de site</a>
                     </li>
@@ -347,9 +354,9 @@
                 </ul>
             </section>
 
-            <section>
-                <h4>Nos hébergements</h4>
+            <section class="section-footer">
                 <ul>
+                <h4>Nos hébergements</h4>
                     <li>
                         <a href="#">Charte qualité</a>
                     </li>
@@ -358,19 +365,19 @@
                     </li>
                 </ul>
             </section>
-            <section>
-
-                <h4>Assistance</h4>
+            <section class="section-footer" >
                 <ul>
+                <h4>Assistance</h4>
                     <li>
-                        <a href="#"></a>Centre d'aide</a>
+                        <a href="#">Centre d'aide</a>
                     </li>
                     <li>
-                        <a href="#"></a>Nous contacter</a>
+                        <a href="#">Nous contacter</a>
                     </li>
                 </ul>
             </section>
         </footer>
+    </div>
 </body>
 
 </html>
