@@ -1,114 +1,190 @@
- @media screen and (max-width:767.98px) {
+ @media screen and (min-width: 320px) and (max-width:767.95px) {
 
-    * {
+ * {
         font-family: 'Raleway', sans-serif;
         margin: 0;
         padding:0;
         box-sizing: border-box;
     }
+     
 
 .main-container {
     width: 100%;
-    padding: 0 20px;
-    box-sizing: border-box;
-    margin: auto;
-
+    padding: 0px;
 }
+
 
 header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-   }
+    margin-bottom: 35px;
+}
 
 .logo-img {
     min-width: 61px;
     min-height: 19px;
-    margin: 30px auto;
+    margin: 0px auto 30px;
 }
 
 /* *******nav******* */
 
-   nav {
+nav {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  
    }
 
-   nav ul {
-    margin: 0;
-    display:flex;
-    justify-content:space-between;
+nav ul {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-   }
-
-   .nav-hebergements a {
+    padding: 0;
     margin: 0;
-    padding-bottom: 1.25rem;
-    color: var(--main-color);   
+   }
+.nav-hebergements {
+    margin:0;
+    padding: 0;
 }
 
-.nav-activités .nav-hebergements {
-    flex-grow: 1;
-    text-align: center;
-    position: relative;
+.nav-hebergements {
+    border-top: 2px solid transparent;
 }
 
 .nav-activités {
     color: black;
     margin: 0;
-    padding: 0 0 15px ;
+    padding: 0;
 }
 
 #barre-hebergements {
     width: 50%;
-    padding-bottom: 15px;
-    margin: 0 auto 0 auto;
-    border-bottom: 2px solid var( --main-color);
-}
-
-.nav-hebergements:hover {
-    border-top : transparent;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 2px solid var(--main-color);
 }
 
 #barre-activity {
     width: 50%;
-    padding-bottom: 15px;
-    margin: 0 auto 0 auto;
-    border-bottom: 2px solid var(--main-bg-color); 
+    text-align: center;
+    padding: 15px;
+    border-bottom: 2px solid var(--main-bg-color);
 }
 
-/***section info***/
+
+/* *****section info***** */
+
 .info {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
+   text-align: left;
+   padding: 20px;
+
 }
+
+.info h1 {
+    margin: 0;
+    font-size: 22px;
+    line-height: 1.4;
+    word-wrap: break-word; 
+}
+
+.info p {
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+/***section recherche***/
 
 .button-search-text {
     display: none;
 }
+.button-search {
+    border-radius: 15px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
 
-.button-search-icon {
+
+.button-icon {
     display: inline;
+    color: #FfFfFf;
     text-align: center;
     background: var(--main-color);
-    color: white;
 }
+
+
+ /* ***** section filters***** */
+
 
 .section-filters {
-    flex-direction: column;
-    align-items: center;
-}
-
-.section-filters ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 10px;
 }
+
+.section-filters p {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    gap: 10px;
+}
+
+
+
+/* *****hebergements and populaires***** */
+
+.hebergements-and-populaires {
+        display: flex;
+        flex-direction: column-reverse;
+        border-radius: 0;
+        gap: 35px;
+    
+    }
+
+/* ***** section les plus populaires***** */
+
+.populaires-cards  {
+    display:block;
+    border-radius: 0;
+}
+
+
+/* *****section hebergements***** */
+
+.hébergements {
+    border-radius: 0;
+    background: white;
+    padding: 
+}
+
+
+
+.hebergements-cards {
+    display: block;
+    padding: 30px;
+}
+
+
+
+/* ***** section activity***** */
+
+.activity-cards {
+    display : flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.card-activity {
+    width: 100%;
+    height: auto;
+}
+
+.card-activity img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
 
 
 /******footer*****/
@@ -119,7 +195,6 @@ footer {
     gap: 20px;
     background-color: #F2F2F2;
     padding: 30px;
-   
 }
 
 footer section {
@@ -128,17 +203,16 @@ footer section {
     align-items: center;
     margin-bottom: 50px
 }
+
 footer h4 {
     font-size: 1.125rem;
     font-weight: bold;
 }
 
 footer ul {
-    list-style: none;
+
     padding: 0;
     text-align: left;
     gap: 15px;
 }
-
-
 }
