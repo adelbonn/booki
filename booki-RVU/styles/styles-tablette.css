@@ -9,14 +9,8 @@
 
 .main-container {
         width: 100%;
-        max-width: 768px;
-        margin: 0 auto;
-        padding: 20px;
-        background: white;
-    }
-
-header {
-        text-align: start;
+        margin: 0;
+        padding: 0 20px ;
     }
 
 nav {
@@ -31,20 +25,7 @@ nav {
     }
     /***hébergements***/
 
-    .hebergements-cards a {
-        display: grid;
-        grid-template-columns: (repeat 3,1fr);
-        grid-template-rows: (repeat 2,1fr);
-        gap: 30px;
-    }
 
-.card {
-        background-color: white;
-        border-radius: 20px;
-        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        text-align: center;
-    }
 
     /***section populaire***/
 
@@ -66,29 +47,17 @@ nav {
 
 
 .activies-cards {
-        display: grid;
-        grid-template-columns: (repeat 4, 1fr);
-        max-height: 270px;
-        min-width: 193.5px;
-        gap: 30px;
-        grid-auto-rows: 270px;
-      }
-
-.card-activity {
-        background: white;
-        border-radius: 20px;
-        box-shadow:  4px 8px 5px 3px #dad9d9d1;
-      }
-
-      .card-activity img {
-        width: 100%;
-        object-fit: cover;
      
-     
+     display: grid;
+     grid-template-columns: (repeat 4, 1fr);
+     max-height: 270px;
+     min-width: 193.5px;
+     gap: 30px;
+     grid-auto-rows: 270px;
       }
 
 
-
+      /* ***footer**** */
 footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -98,13 +67,12 @@ footer {
 
 footer .section-footer {
     text-align: left;
-
 }
 
 footer h4 {
     font-size: 1rem;
     font-weight: 700;
-    margin-bottom: 10px;;
+    margin-bottom: 10px;
 }
 
 footer ul {
