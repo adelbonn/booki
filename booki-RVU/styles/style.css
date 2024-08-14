@@ -42,12 +42,11 @@ a {
 
 
 p {
-    font-size: 1em;
+    font-size: 1rem;  /***16px***/
     font-weight: normal;
 }
 
 .section-title {
-    margin: 0;
     font-size: 22px;
     font-weight: bold;
 }
@@ -57,6 +56,17 @@ p {
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+
+.card img {
+    object-fit: cover;
+    height: auto;   
+}
+
+.card-title {
+    font-size: 1rem;  /***16px***/
+    font-weight: bold;
 }
 
 .euro {
@@ -130,24 +140,22 @@ nav ul {
 /* *****header, section info (h1+P, form)***** add code*/
 
 h1 {
-    font-family: 'Raleway', sans-serif;
     font-size: 1.375rem;   /***22px***/
     font-weight: 700;
-    margin: 0.625rem 0 0 0;  /* ** 10px** */
+    margin-top: 0.625rem;  /* ** 10px** */
 }
 
 header p {
 
-    margin: 8px 0 25px 0;
+    margin: 0.5rem 0 1.562rem 0; /***8px 25px***/
     padding: 0 0 10px 0;
 }
 
 
-/*add code form*/
+/* *****add code form******* */
 
 form {
     display: flex;
-    margin: 0;
 }
 
 .fa-location-dot {
@@ -170,7 +178,6 @@ input[type="search"] {
     border: 1px solid var(--filter-bg-color);
     border-left: none; 
     border-right: none; 
-    outline: none;
     border-top: 1px solid var(--main-bg-color);
     border-bottom: 1px solid var(--main-bg-color);
     background-color: white;
@@ -219,7 +226,7 @@ input[type="search"] {
     gap: 15px;
     font-size: 1.125rem;   /**18px**/
     font-weight: 700;
-    margin: 35px 0 35px 0;
+    margin: 2.188rem 0 2.188rem 0;  /***35px***/
 }
 
 .section-filters ul {
@@ -227,7 +234,7 @@ input[type="search"] {
     justify-content: center;
     align-items: center;
     padding: 0;
-    gap:0.938rem;  /**15px**/
+    gap: 15px;
 }
 
 .button-filters {
@@ -238,22 +245,16 @@ input[type="search"] {
     background-color: white;
     border: 2px solid #F2F2F2;
     border-radius: 50px;
-    font-family: 'Raleway', sans-serif;
     font-size: 1.063rem;   /**17px**/
     font-weight: 700;
     color: black;
     height: 50px;
     cursor: default; 
 }
+
 .filtres {
-    font-family: 'Raleway', sans-serif;
     font-weight: bold; 
     margin:0;
-}
-
-.li-filters {   
-    display: flex;
-    width: auto;
 }
 
 .button-filters:hover {
@@ -286,16 +287,6 @@ input[type="search"] {
 
 
 /*main*/
-
-.card img {
-    object-fit: cover;
-    height: auto;   
-}
-
-.card-title {
-    font-size: 16px;
-    font-weight: bold;
-}
 
 /****** Hebergements And Populaires ***********/
 
@@ -333,6 +324,7 @@ input[type="search"] {
 
 .hebergements-cards a {
     width: calc(33.333% - 30px);
+    min-height: 207.25px;
 }
 
 .hebergements-cards img {
@@ -357,13 +349,13 @@ input[type="search"] {
 
 .hebergements-cards .card-title {
     
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
     text-align: left;
 }
 
 .hebergements-cards .card-subtitle {
-    font-size: 14px;
+    font-size: 0.875rem;  /***14px***/
 }
 
 
@@ -417,7 +409,7 @@ input[type="search"] {
 }
 
 .populaires-cards .card-subtitle {
-    margin: 0;
+    font-size: 0.875rem;  /***14px***/
 }
 
 .populaires-cards .card-rating {
@@ -454,7 +446,7 @@ input[type="search"] {
     border-radius: 20px;
 }
 
-.card-activity img {  /* revoir la proportion des images*/
+.card-activity img { 
     object-fit: cover;
     width: 100%;
     height: 380px;
@@ -536,21 +528,6 @@ footer ul {
 }
 
 
-/***add icon-search***/
-
-@media screen and (max-width: 768px) {
-    
-    .button-text {
-        display: none;
-    }
-
-    .button-icon {
-        display: inline;
-        color: #FfFfFf;
-    }
-}
-
-
 /* Small devices (phones, less than 768px) */
 @media screen and  (max-width: 767.98px) {
     /* ... */
@@ -561,6 +538,7 @@ footer ul {
 @media screen and (min-width: 1440px) {
 
 .main-container {
+        width: 100%;
         max-width: 1440px;
         background: #fff;
     }

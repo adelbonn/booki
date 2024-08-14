@@ -17,13 +17,13 @@
 header {
     display: flex;
     flex-direction: column;
-    margin-bottom: 35px;
+    margin-bottom: 0;
 }
 
 .logo-img {
     min-width: 61px;
     min-height: 19px;
-    margin: 0px auto 30px;
+    margin: 0 auto 1.875rem; /***30px***/
 }
 
 /* *******nav******* */
@@ -32,15 +32,17 @@ nav {
     width: 100%;
     display: flex;
     flex-direction: column;
+    margin-bottom: 0;
+    padding-bottom: 0.625rem; /***10px***/
    }
 
 nav ul {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 0;
-    margin: 0;
+    gap: 0;
    }
+
 .nav-hebergements {
     margin:0;
     padding: 0;
@@ -59,14 +61,14 @@ nav ul {
 #barre-hebergements {
     width: 50%;
     text-align: center;
-    padding: 15px;
+    padding: 0.938rem; /***15px***/
     border-bottom: 2px solid var(--main-color);
 }
 
 #barre-activity {
     width: 50%;
     text-align: center;
-    padding: 15px;
+    padding: 0.938rem;
     border-bottom: 2px solid var(--main-bg-color);
 }
 
@@ -75,38 +77,50 @@ nav ul {
 
 .info {
    text-align: left;
-   padding: 20px;
-
-}
-
-.info h1 {
-    margin: 0;
-    font-size: 22px;
-    line-height: 1.4;
-    word-wrap: break-word; 
+   padding: 1.25rem;  /***20px***/
 }
 
 .info p {
-    font-size: 16px;
-    margin-top: 8px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
 }
 
-/***section recherche***/
+.info-section {
+    margin-bottom: 0;
+}
+
+.info-section p {
+    padding-bottom: 0;
+}
+/***section search (form)***/
+
+form {
+    display: flex;
+    justify-content: center;
+    outline: none;
+}
+
+input[type="search"] {
+    max-width: 236px;
+    max-height: 49px; 
+  }
 
 .button-search-text {
     display: none;
 }
+
 .button-search {
-    border-radius: 15px;
+    border-radius: 0.938rem;  /***15px***/
+    margin-left: -0.813rem;   /***13px***/
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-
 
 .button-icon {
     display: inline;
     color: #FfFfFf;
     text-align: center;
     background: var(--main-color);
+
 }
 
 
@@ -117,74 +131,90 @@ nav ul {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 0.625rem; /***10px***/
 }
 
+.section-filters ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem 0.625rem;    /*** 20px  10px***/
+}
+
+.button-filters {
+    padding: 0.25rem 1.188rem;    /***4px  19px***/
+    height: 50px;
+    width: 162.5px;
+    text-align: center;
+    font-size: 0.875rem;  /**14px**/
+    font-weight: bold;
+}
+
+
 .section-filters p {
-    font-size: 18px;
+    font-size: 1.125rem;   /***18px***/
     font-weight: bold;
     text-align: left;
     gap: 10px;
 }
-
-
 
 /* *****hebergements and populaires***** */
 
 .hebergements-and-populaires {
         display: flex;
         flex-direction: column-reverse;
-        border-radius: 0;
-        gap: 35px;
-    
+        justify-content: center;
+        width: 100%;
     }
 
 /* ***** section les plus populaires***** */
 
-.populaires-cards  {
-    display:block;
+
+.hebergements-and-populaires .populaires {
+    display: block;
     border-radius: 0;
 }
 
+.populaires-cards  {
+    display:block;
+}
 
 /* *****section hebergements***** */
 
-.hébergements {
-    border-radius: 0;
+
+.hebergements-and-populaires .hebergements {
+    padding: 20px;
     background: white;
-    padding: 
 }
-
-
-
 .hebergements-cards {
     display: block;
-    padding: 30px;
+}
+.hebergements h2 {
+    font-size: 1.375rem;  /***22px***/
 }
 
 
 
 /* ***** section activity***** */
 
+
 .activity-cards {
     display : flex;
     flex-direction: column;
-    margin-top: 15px;
+    margin-top: 0.938rem;  /***15px***/
 }
 
 .card-activity {
     width: 100%;
-    height: auto;
+    max-height: 200px;
+    
 }
 
 .card-activity img {
     width: 100%;
-    height: auto;
+    max-height: 141px;
+    
 }
-
-
-
-
 
 
 /******footer*****/
@@ -192,16 +222,17 @@ nav ul {
 footer {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 1.25rem;
     background-color: #F2F2F2;
-    padding: 30px;
+    padding: 1.875rem;   /***30px***/
+    margin-top: 2.188rem;   /**35px**/
 }
 
 footer section {
     display: flex;
     justify-content: start ;
     align-items: center;
-    margin-bottom: 50px
+    margin-bottom: 2.188rem;   /***35px***/
 }
 
 footer h4 {
@@ -213,6 +244,27 @@ footer ul {
 
     padding: 0;
     text-align: left;
-    gap: 15px;
+    gap: 0.938rem;   /***15px***/
 }
+}
+
+ 
+
+@media screen and (min-width: 320px) and (max-width:374px) {
+
+.button-filters {
+    padding: 0.25rem 1.188rem;
+    height: 3.125rem;   /**50px**/
+    width: 16.875rem;   /***270px***/
+    text-align: center;
+    font-size: 0.875rem;  /**14px**/
+}
+
+input[type="search"] {
+    
+    max-width: 195px;
+    height: 49px;
+    max-height: 49px; 
+  }
+
 }
