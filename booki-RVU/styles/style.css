@@ -181,6 +181,10 @@ input[type="search"] {
   color: black;
 }
 
+::placeholder {
+    color: black;
+}
+
 .button-search {
   display: flex;
   justify-content: center;
@@ -199,6 +203,7 @@ input[type="search"] {
   margin: 0;
   border: 1px;
   cursor: pointer;
+
 }
 
 .button-search-text {
@@ -218,7 +223,7 @@ input[type="search"] {
   gap: 15px;
   font-size: 1.125rem; /**18px**/
   font-weight: 700;
-  margin: 2.188rem 0 2.188rem 0; /***35px***/
+  margin-top: 2.188rem; /***35px***/
 }
 
 .section-filters ul {
@@ -429,7 +434,7 @@ input[type="search"] {
   display: flex;
   flex-direction: column;
   background: white;
-  box-shadow: 4px 8px 5px 3px #dad9d9d1;
+  box-shadow:  0px 3px 15px 0px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
 }
 
