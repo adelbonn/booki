@@ -246,3 +246,7 @@
     max-height: 49px;
   }
 }
+
+@media screen and (min-width: 545px) and (max-width: 719px) {
+    
+}
