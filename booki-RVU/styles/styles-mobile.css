@@ -82,7 +82,7 @@
   }
 
   .info-section {
-    margin-bottom: 0;
+    margin: 15px 0 0 0;
   }
 
   .info-section p {
@@ -148,6 +148,8 @@
     font-weight: bold;
     text-align: left;
     gap: 10px;
+    margin: 0;
+    padding: 0;
   }
 
   /* *****hebergements and populaires***** */
@@ -157,6 +159,7 @@
     flex-direction: column-reverse;
     justify-content: center;
     width: 100%;
+    gap: 15px;
   }
 
   /* ***** section les plus populaires***** */
@@ -181,6 +184,10 @@
   }
   .hebergements h2 {
     font-size: 1.375rem; /***22px***/
+  }
+
+  .afficher-plus {
+    margin-top: 15px;
   }
 
   /* ***** section activity***** */
@@ -248,5 +255,5 @@
 }
 
 @media screen and (min-width: 545px) and (max-width: 719px) {
-    
+
 }
