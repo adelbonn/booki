@@ -87,8 +87,8 @@ header {
 /* *****nav bar*****add code */
 
 .logo-img {
-  width: 3.818rem;
-  height: 1.188rem;
+  width: 3.818rem;  /**61px**/
+  height: 1.188rem;   /***19px***/
 }
 
 nav {
@@ -319,41 +319,50 @@ input[type="search"] {
 }
 
 .hebergements-cards a {
-  width: calc(33.333% - 30px);
-  min-height: 207.25px;
-}
+    width: calc(33.333% - 30px);
+    min-height: 207.25px;
+  }
+
+.hebergements-cards .card {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 207.25px;
+    padding-bottom: 15px;
+    gap: 4px 0;
+;  }
 
 .hebergements-cards img {
   width: 100%;
-  max-height: 124px;
+  height: 114px;
   border-radius: 20px 20px 0 0;
   object-fit: cover;
 }
 
-.hebergements-cards .card {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  max-height: 207.25px;
-}
 
 .hebergements .card-content {
-  padding-left: 10px;
-  margin: 4px 0 0 10px;
+  padding: 0 15px;
+  margin: 0;
+  width: auto;
+  height: 64px; 
 }
 
 .hebergements-cards .card-title {
   font-size: 1rem;
   font-weight: bold;
   text-align: left;
+  margin-bottom: 8px;
 }
 
-.hebergements-cards .card-subtitle {
+.hebergements-cards p {
   font-size: 0.875rem; /***14px***/
+  margin-bottom: 8px;
 }
 
 .hebergements-cards .card-rating {
-  margin-bottom: 10px;
+    margin: 0;
+    apdding:0;
+ 
 }
 
 .afficher-plus {
