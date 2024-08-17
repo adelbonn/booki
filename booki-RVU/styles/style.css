@@ -84,7 +84,7 @@ header {
   justify-content: flex-start;
 }
 
-/* *****nav bar*****add code */
+/* *****nav bar***** */
 
 .logo-img {
   width: 3.818rem;  /**61px**/
@@ -114,7 +114,7 @@ nav ul {
   gap: 1.25rem; /**15px**/
 }
 
-/* *****specific styles nav hébergements*****add code */
+/* *****specific styles nav hébergements***** */
 
 .nav-hebergements {
   margin: 0;
@@ -122,6 +122,7 @@ nav ul {
   color: var(--main-color);
   border-top: 2px solid var(--main-color);
 }
+
 
 /* *****specific styles nav Activités*****add code*/
 
@@ -361,7 +362,7 @@ input[type="search"] {
 
 .hebergements-cards .card-rating {
     margin: 0;
-    apdding:0;
+    padding:0;
  
 }
 
@@ -455,17 +456,19 @@ input[type="search"] {
 }
 
 .card-activity h3 {
-  font-size: 1rem;
-  padding: 19px 20px;
+   font-size: 1rem;
+   width: 100%;
+   padding: 19px 20px;
+   margin: 0;
 }
 
-/* *****footer***** (add code)*/
+/* *****footer***** */
 
 footer {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
-  background: #f2f2f2;
+  align-items: flex-start;
+  background: var(--main-bg-color);
   margin: 30px 0 0;
   padding: 20px;
 }
@@ -474,6 +477,7 @@ footer h4 {
   font-size: 1.125rem;
   font-weight: bold;
   text-align: start;
+  padding-bottom: 15px;
 }
 
 footer ul {
@@ -485,6 +489,9 @@ footer ul {
 
 .section-footer {
   display: flex;
+  flex-direction: column;
+ justify-content: start;
+
   flex: 1 1 calc(33.333%);
 }
 
