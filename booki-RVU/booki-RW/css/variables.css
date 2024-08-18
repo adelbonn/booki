@@ -1,0 +1,27 @@
+:root {
+
+    /***colors***/
+    --main-color: #0065fc;
+    --secondary-color: #d9d9d9;
+    --text-color: #333333;
+     --main-bg-color: #f2f2f2;
+    --filter-bg-color: #deebff;
+      
+        /* Typographie */
+      
+        --font-family: 'Raleway', sans serif;
+
+          /* font-size */
+         --font-size-h1: 1.375rem; /* 22px */
+         --font-size-h2: 1.375rem; /* 22px */
+         --font-size-h3: 1.125rem; /* 18px */
+         --font-size-h4: 1rem; /* 16px */
+         --font-size-p: 1rem; /* 16px */
+         --font-size-button: 1.063rem; /* 17px */
+         --font-size-subtitle: 0.875rem; /* 14px */
+
+        /* font-weight */
+          --font-weight-regular: 400;
+          --font-weight-bold: 700;
+        
+}
